@@ -27,10 +27,8 @@ function isEven(num){
 function isVowel(char){
     let vowels = ['a','e','i','o','u'];
     //console.log(vowels.contains(char.toLowerCase()))
-    if(typeof char === "string" && vowels.includes((char).toLowerCase())){
-        return true;
-    }
-    return false
+    return typeof char === "string" && vowels.includes((char).toLowerCase());
+
 
 }
 
