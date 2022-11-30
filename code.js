@@ -6,10 +6,10 @@ function helloWorld() {
 
 function sayHello(name){
 
-    if(name) {
+    if(typeof name === "string" && name.length > 1 && isNaN(parseFloat(name))) {
         return "Hello, " + name.toString() + "!"
     }else{
-        return "Hello, "
+        return "Hello, World!"
     }
 
 }

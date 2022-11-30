@@ -37,4 +37,25 @@ describe('sayHello', function() {
     it("should say 'Hello, Pat!'", function() {
         expect(sayHello('Pat')).toBe('Hello, Pat!');
     });
+    it("should say 'Hello, World!'", function() {
+        expect(sayHello('World')).toBe('Hello, World!');
+    });
+    it("should say 'Hello, World!'", function() {
+        expect(sayHello(false)).toBe('Hello, World!');
+    });
+    it("should say 'Hello, World!'", function() {
+        expect(sayHello(null)).toBe('Hello, World!');
+    });
+    it("should say 'Hello, World!'", function() {
+        expect(sayHello(2.3)).toBe('Hello, World!');
+    });
+    it("should say 'Hello, World!'", function() {
+        expect(sayHello("543")).toBe('Hello, World!');
+    });
+    it("should say 'Hello, World!'", function() {
+        expect(sayHello(" ")).toBe('Hello, World!');
+    });
+    it("should say 'Hello, World!'", function() {
+        expect(sayHello("")).toBe('Hello, World!');
+    });
 });
