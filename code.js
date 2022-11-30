@@ -18,6 +18,11 @@ function isFive(five){
     return parseInt(five) === 5;
 }
 
+function isEven(num){
+    return num % 2 === 0
+    //if(typeof num === "number"||typeof num === "string"){return num % 2 === 0;}else{return false;}
+}
+
 // function sayHello(name){
 //
 //     if(name === "Alex") {

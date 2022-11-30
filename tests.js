@@ -81,3 +81,38 @@ describe('isFive', function() {
         expect(isFive(Math.ceil(Math.random() * 100) + 6)).toBe(false);
     });
 });
+
+
+
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return a bool when called', function() {
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it('should return a faslesbool when called', function() {
+        expect(isEven()).toBe(false);
+    });
+    it('should return true when passed even', function() {
+        expect(isEven(4)).toBe(true);
+    });
+    it('should return false when passed odd', function() {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return true when passed even string', function() {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return false when passed string', function() {
+        expect(isEven("bananana")).toBe(false);
+    });
+    it('should return false w infin', function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false w bool', function() {
+        expect(isEven(true)).toBe(false);
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(isEven()).not.toBe(undefined);
+    });
+});
