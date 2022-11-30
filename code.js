@@ -14,6 +14,10 @@ function sayHello(name){
 
 }
 
+function isFive(five){
+    return parseInt(five) === 5;
+}
+
 // function sayHello(name){
 //
 //     if(name === "Alex") {

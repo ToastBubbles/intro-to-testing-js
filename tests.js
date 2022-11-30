@@ -59,3 +59,25 @@ describe('sayHello', function() {
         expect(sayHello("")).toBe('Hello, World!');
     });
 });
+
+
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a bool when called', function() {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return true when passed 5 when executed', function() {
+        expect(isFive(5)).toBe(true);
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(isFive()).not.toBe(undefined);
+    });
+    it("should never return true when passed 5 as string", function() {
+        expect(isFive("5")).toBe(true);
+    });
+    it("should return false when passed not 5", function() {
+        expect(isFive(Math.ceil(Math.random() * 100) + 6)).toBe(false);
+    });
+});
