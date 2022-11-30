@@ -23,6 +23,27 @@ function isEven(num){
     //if(typeof num === "number"||typeof num === "string"){return num % 2 === 0;}else{return false;}
 }
 
+
+function isVowel(char){
+    let vowels = ['a','e','i','o','u'];
+    //console.log(vowels.contains(char.toLowerCase()))
+    if(typeof char === "string" && vowels.includes((char).toLowerCase())){
+        return true;
+    }
+    return false
+
+}
+
+
+function add(a,b){
+    console.log(parseFloat(a)+parseFloat(b))
+
+    return parseFloat(a)+parseFloat(b);
+}
+
+
+
+
 // function sayHello(name){
 //
 //     if(name === "Alex") {

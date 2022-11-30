@@ -116,3 +116,62 @@ describe('isEven', function() {
         expect(isEven()).not.toBe(undefined);
     });
 });
+
+
+describe('isVowel', function() {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a bool when called', function() {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it('should return a true when passed A', function() {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return f when passed y', function() {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return t when passed a', function() {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return false when passed bool', function() {
+        expect(isVowel(true)).toBe(false);
+    });
+    it('should return false when passed num', function() {
+        expect(isVowel(4)).toBe(false);
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(isVowel()).not.toBe(undefined);
+    });
+    it("should ret f when passed banana", function() {
+        expect(isVowel("banana")).toBe(false);
+    });
+});
+
+
+describe('add', function() {
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should return a num when called', function () {
+        expect(typeof add()).toBe("number");
+    });
+    it('should return added values', function () {
+        expect(add(5,2)).toBe(7);
+    });
+    it('should return added values', function () {
+        expect(add(-2,-5)).toBe(-7);
+    });
+    it('should return added values', function () {
+        expect(add("5", 12)).toBe(17);
+    });
+    it('should return added values', function () {
+        expect(add("21","12")).toBe(33);
+    });
+    it('should return NaN', function () {
+        expect(isNaN(add("baba",12))).toBe(true);
+    });
+    it('should return NaN when passed empty', function () {
+        expect(isNaN(add())).toBe(true);
+    });
+});
